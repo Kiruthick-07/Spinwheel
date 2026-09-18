@@ -113,31 +113,33 @@
             <!-- Round Progress -->
             <div class="round-progress" id="roundProgress"></div>
 
-            <!-- Wheel -->
-            <div class="wheel-wrapper">
-              <div class="wheel-container">
-                <!-- Pointer -->
-                <div class="wheel-pointer" id="wheelPointer">
-                  <svg viewBox="0 0 40 44" xmlns="http://www.w3.org/2000/svg">
-                    <polygon points="20,44 4,0 36,0" fill="#00e676" stroke="#0a0a0a" stroke-width="2"/>
-                  </svg>
+            <!-- Wheel and Right Controls Wrapper -->
+            <div class="wheel-and-controls">
+              <!-- Wheel -->
+              <div class="wheel-wrapper">
+                <div class="wheel-container">
+                  <!-- Pointer -->
+                  <div class="wheel-pointer" id="wheelPointer">
+                    <svg viewBox="0 0 40 44" xmlns="http://www.w3.org/2000/svg">
+                      <polygon points="20,44 4,0 36,0" fill="#00e676" stroke="#0a0a0a" stroke-width="2"/>
+                    </svg>
+                  </div>
+                  <canvas id="wheelCanvas"></canvas>
+                  <div class="wheel-empty" id="wheelEmpty">Generate a wheel</div>
                 </div>
-                <canvas id="wheelCanvas"></canvas>
-                <div class="wheel-empty" id="wheelEmpty">Generate a wheel</div>
               </div>
-            </div>
 
-            <!-- Spin Progress -->
-            <div class="spin-progress" id="spinProgress"></div>
-
-            <!-- Controls -->
-            <div class="spin-btn-container">
-              <button class="spin-btn" id="spinBtn" disabled>SPIN</button>
-            </div>
-
-            <div class="wheel-controls">
-              <button class="btn btn-primary" id="nextRoundBtn" disabled>Next Round →</button>
-              <button class="btn btn-danger" id="resetEventBtn">Reset Event</button>
+              <!-- Right Side Controls -->
+              <div class="wheel-right-controls">
+                <div class="spin-btn-container">
+                  <button class="spin-btn" id="spinBtn" disabled>SPIN</button>
+                </div>
+                <div class="spin-progress" id="spinProgress"></div>
+                <div class="wheel-controls">
+                  <button class="btn btn-primary btn-block" id="nextRoundBtn" disabled>Next Round →</button>
+                  <button class="btn btn-danger btn-block" id="resetEventBtn">Reset Event</button>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -220,20 +222,24 @@
               <div class="round-info">Load teams to begin</div>
             </div>
 
-            <div class="wheel-wrapper">
-              <div class="wheel-container">
-                <div class="wheel-pointer" id="teamWheelPointer">
-                  <svg viewBox="0 0 40 44" xmlns="http://www.w3.org/2000/svg">
-                    <polygon points="20,44 4,0 36,0" fill="#00e676" stroke="#0a0a0a" stroke-width="2"/>
-                  </svg>
+            <div class="wheel-and-controls">
+              <div class="wheel-wrapper">
+                <div class="wheel-container">
+                  <div class="wheel-pointer" id="teamWheelPointer">
+                    <svg viewBox="0 0 40 44" xmlns="http://www.w3.org/2000/svg">
+                      <polygon points="20,44 4,0 36,0" fill="#00e676" stroke="#0a0a0a" stroke-width="2"/>
+                    </svg>
+                  </div>
+                  <canvas id="teamWheelCanvas"></canvas>
+                  <div class="wheel-empty" id="teamWheelEmpty">Load teams to display wheel</div>
                 </div>
-                <canvas id="teamWheelCanvas"></canvas>
-                <div class="wheel-empty" id="teamWheelEmpty">Load teams to display wheel</div>
               </div>
-            </div>
 
-            <div class="spin-btn-container">
-              <button class="spin-btn" id="teamSpinBtn" disabled>SPIN</button>
+              <div class="wheel-right-controls">
+                <div class="spin-btn-container">
+                  <button class="spin-btn" id="teamSpinBtn" disabled>SPIN</button>
+                </div>
+              </div>
             </div>
           </div>
 

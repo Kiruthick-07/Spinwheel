@@ -442,7 +442,7 @@ textarea.form-input {
 .spin-btn-container {
   display: flex;
   justify-content: center;
-  margin-top: 16px;
+  margin-top: 0;
 }
 
 .spin-btn {
@@ -512,6 +512,24 @@ textarea.form-input {
   justify-content: center;
   position: relative;
   min-height: 620px;
+}
+
+.wheel-and-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.wheel-right-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  min-width: 160px;
 }
 
 .wheel-wrapper {
@@ -1190,6 +1208,10 @@ body.event-mode .spin-btn {
   .team-page-layout {
     grid-template-columns: 1fr;
   }
+  .wheel-and-controls {
+    flex-direction: column;
+    gap: 20px;
+  }
   .wheel-container {
     width: min(520px, 86vw);
     height: min(520px, 86vw);
@@ -1373,10 +1395,11 @@ body.event-mode .spin-btn {
    ========================================= */
 .wheel-controls {
   display: flex;
+  flex-direction: column;
   gap: 10px;
   justify-content: center;
-  margin-top: 14px;
-  flex-wrap: wrap;
+  width: 100%;
+  max-width: 180px;
 }
 
 /* =========================================
